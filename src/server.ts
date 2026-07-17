@@ -7,7 +7,7 @@ const PORT = 5000;
 
 app.get("/", (req: Request, res: Response) => {
 	res.json({
-		message: "Serein backend running",
+		message: "Serein backend running now",
 	});
 });
 
