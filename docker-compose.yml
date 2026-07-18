@@ -1,0 +1,16 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: serein-postgres
+    restart: always
+    environment:
+      POSTGRES_USER: serein
+      POSTGRES_PASSWORD: serein_password
+      POSTGRES_DB: serein_dev
+    ports:
+      - "5432:5432"
+    volumes:
+      - serein_postgres_data:/var/lib/postgresql/data
+
+volumes:
+  serein_postgres_data:
